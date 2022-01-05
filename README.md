@@ -47,7 +47,7 @@ I get /Users/alexaabbas/Desktop/airflow-tutorial but you might get something dif
 
 8. Set the path as the AIRFLOW_HOME environment variable. Note that you have to do this every time you open a new Terminal window and wish to use Airflow CLI. Alternatively you can set a permanent environment variable in your bash_profile.
 
-export AIRFLOW_HOME=/Users/alexaabbas/Desktop/airflow-tutorial
+export AIRFLOW_HOME=/Users/nivedita/Desktop/airflow-tutorial
 
 By default airflow uses ~/airflow as it's AIRFLOW_HOME directory. We can overwrite this by setting a different path. Airflow will initialise the airflow.cfg file here along with the logs folder. We'll store our dags and plugins in this directory.
 
