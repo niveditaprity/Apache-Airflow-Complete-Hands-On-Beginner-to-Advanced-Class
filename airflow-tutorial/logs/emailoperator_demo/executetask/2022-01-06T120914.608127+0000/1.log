@@ -1,0 +1,23 @@
+[2022-01-06 17:39:22,263] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: emailoperator_demo.executetask manual__2022-01-06T12:09:14.608127+00:00 [queued]>
+[2022-01-06 17:39:22,272] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: emailoperator_demo.executetask manual__2022-01-06T12:09:14.608127+00:00 [queued]>
+[2022-01-06 17:39:22,273] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-06 17:39:22,273] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-01-06 17:39:22,273] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-06 17:39:22,283] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): executetask> on 2022-01-06 12:09:14.608127+00:00
+[2022-01-06 17:39:22,286] {standard_task_runner.py:52} INFO - Started process 68343 to run task
+[2022-01-06 17:39:22,291] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'emailoperator_demo', 'executetask', 'manual__2022-01-06T12:09:14.608127+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/email_operator_demo.py', '--cfg-path', '/var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T/tmpo850heqj', '--error-file', '/var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T/tmpzx65lazg']
+[2022-01-06 17:39:22,293] {standard_task_runner.py:77} INFO - Job 89: Subtask executetask
+[2022-01-06 17:39:22,342] {logging_mixin.py:109} INFO - Running <TaskInstance: emailoperator_demo.executetask manual__2022-01-06T12:09:14.608127+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2022-01-06 17:39:22,381] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=emailoperator_demo
+AIRFLOW_CTX_TASK_ID=executetask
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-06T12:09:14.608127+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-01-06T12:09:14.608127+00:00
+[2022-01-06 17:39:22,382] {logging_mixin.py:109} INFO - task started
+[2022-01-06 17:39:22,382] {python.py:175} INFO - Done. Returned value was: None
+[2022-01-06 17:39:22,390] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=emailoperator_demo, task_id=executetask, execution_date=20220106T120914, start_date=20220106T120922, end_date=20220106T120922
+[2022-01-06 17:39:22,434] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-01-06 17:39:22,461] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

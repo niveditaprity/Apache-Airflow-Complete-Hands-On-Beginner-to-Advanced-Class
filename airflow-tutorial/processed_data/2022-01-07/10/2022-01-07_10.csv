@@ -1,0 +1,14 @@
+client_id,booking_date,room_type,hotel_id,booking_cost,currency,age,client_name,client_type,hotel_name
+1,2016-11-02,first_class_2_bed,6,3140.0,GBP,,Ann,standard,The New View
+2,2016-11-02,first_class_2_bed,5,2512.0,GBP,38.0,Ben,standard,The Clift Royal
+3,2016-11-02,first_class_2_bed,4,2512.0,GBP,30.0,Tom,standard,Millennium Times Square
+4,2016-11-02,first_class_2_bed,3,3140.0,GBP,43.0,Bianca,VIP,Green Acres
+5,2016-11-02,first_class_2_bed,2,3140.0,GBP,49.0,Caroline,standard,Dream Connect
+6,2016-11-02,first_class_2_bed,1,3140.0,GBP,28.0,Kate,VIP,Astro Resort
+client_id,booking_date,room_type,hotel_id,booking_cost,currency,age,client_name,client_type,hotel_name
+1,2016-11-02,first_class_2_bed,6,3140.0,GBP,,Ann,standard,The New View
+2,2016-11-02,first_class_2_bed,5,2512.0,GBP,38.0,Ben,standard,The Clift Royal
+3,2016-11-02,first_class_2_bed,4,2512.0,GBP,30.0,Tom,standard,Millennium Times Square
+4,2016-11-02,first_class_2_bed,3,3140.0,GBP,43.0,Bianca,VIP,Green Acres
+5,2016-11-02,first_class_2_bed,2,3140.0,GBP,49.0,Caroline,standard,Dream Connect
+6,2016-11-02,first_class_2_bed,1,3140.0,GBP,28.0,Kate,VIP,Astro Resort

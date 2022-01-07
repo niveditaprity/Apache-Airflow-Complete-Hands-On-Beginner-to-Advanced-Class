@@ -1,0 +1,8 @@
+client_id,booking_date,room_type,hotel_id,booking_cost,currency
+
+1,2016/11/02,first_class_2_bed,6,3140.0,GBP
+2,2016/11/02,first_class_2_bed,5,3140.0,EUR
+3,2016/11/02,first_class_2_bed,4,3140.0,EUR
+4,2016/11/02,first_class_2_bed,3,3140.0,GBP
+5,2016/11/02,first_class_2_bed,2,3140.0,GBP
+6,2016/11/02,first_class_2_bed,1,3140.0,GBP

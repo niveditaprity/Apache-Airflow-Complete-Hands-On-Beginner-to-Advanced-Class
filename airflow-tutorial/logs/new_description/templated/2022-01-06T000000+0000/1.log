@@ -1,0 +1,42 @@
+[2022-01-07 15:36:22,194] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: new_description.templated scheduled__2022-01-06T00:00:00+00:00 [queued]>
+[2022-01-07 15:36:22,201] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: new_description.templated scheduled__2022-01-06T00:00:00+00:00 [queued]>
+[2022-01-07 15:36:22,201] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-07 15:36:22,201] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-01-07 15:36:22,201] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-07 15:36:22,210] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): templated> on 2022-01-06 00:00:00+00:00
+[2022-01-07 15:36:22,214] {standard_task_runner.py:52} INFO - Started process 89917 to run task
+[2022-01-07 15:36:22,220] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'new_description', 'templated', 'scheduled__2022-01-06T00:00:00+00:00', '--job-id', '327', '--raw', '--subdir', 'DAGS_FOLDER/new_description_dag.py', '--cfg-path', '/var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T/tmpf5am6sr6', '--error-file', '/var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T/tmpi3uhttom']
+[2022-01-07 15:36:22,222] {standard_task_runner.py:77} INFO - Job 327: Subtask templated
+[2022-01-07 15:36:22,280] {logging_mixin.py:109} INFO - Running <TaskInstance: new_description.templated scheduled__2022-01-06T00:00:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2022-01-07 15:36:22,352] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=new_description
+AIRFLOW_CTX_TASK_ID=templated
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-06T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-06T00:00:00+00:00
+[2022-01-07 15:36:22,353] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T
+[2022-01-07 15:36:22,354] {subprocess.py:74} INFO - Running command: ['bash', '-c', '\n\n    echo "2022-01-06"\n    echo "2022-01-13"\n    echo "Parameter I passed in"\n\n    echo "2022-01-06"\n    echo "2022-01-13"\n    echo "Parameter I passed in"\n\n    echo "2022-01-06"\n    echo "2022-01-13"\n    echo "Parameter I passed in"\n\n    echo "2022-01-06"\n    echo "2022-01-13"\n    echo "Parameter I passed in"\n\n    echo "2022-01-06"\n    echo "2022-01-13"\n    echo "Parameter I passed in"\n']
+[2022-01-07 15:36:22,362] {subprocess.py:85} INFO - Output:
+[2022-01-07 15:36:22,366] {subprocess.py:89} INFO - 2022-01-06
+[2022-01-07 15:36:22,367] {subprocess.py:89} INFO - 2022-01-13
+[2022-01-07 15:36:22,367] {subprocess.py:89} INFO - Parameter I passed in
+[2022-01-07 15:36:22,368] {subprocess.py:89} INFO - 2022-01-06
+[2022-01-07 15:36:22,368] {subprocess.py:89} INFO - 2022-01-13
+[2022-01-07 15:36:22,368] {subprocess.py:89} INFO - Parameter I passed in
+[2022-01-07 15:36:22,369] {subprocess.py:89} INFO - 2022-01-06
+[2022-01-07 15:36:22,369] {subprocess.py:89} INFO - 2022-01-13
+[2022-01-07 15:36:22,369] {subprocess.py:89} INFO - Parameter I passed in
+[2022-01-07 15:36:22,369] {subprocess.py:89} INFO - 2022-01-06
+[2022-01-07 15:36:22,370] {subprocess.py:89} INFO - 2022-01-13
+[2022-01-07 15:36:22,370] {subprocess.py:89} INFO - Parameter I passed in
+[2022-01-07 15:36:22,370] {subprocess.py:89} INFO - 2022-01-06
+[2022-01-07 15:36:22,371] {subprocess.py:89} INFO - 2022-01-13
+[2022-01-07 15:36:22,371] {subprocess.py:89} INFO - Parameter I passed in
+[2022-01-07 15:36:22,371] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-01-07 15:36:22,395] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=new_description, task_id=templated, execution_date=20220106T000000, start_date=20220107T100622, end_date=20220107T100622
+[2022-01-07 15:36:22,440] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-01-07 15:36:22,464] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

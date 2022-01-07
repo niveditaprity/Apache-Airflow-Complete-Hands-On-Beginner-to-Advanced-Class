@@ -1,0 +1,26 @@
+[2022-01-05 20:24:03,357] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: my_test.my_task_3 manual__2022-01-05T14:53:42+00:00 [queued]>
+[2022-01-05 20:24:03,366] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: my_test.my_task_3 manual__2022-01-05T14:53:42+00:00 [queued]>
+[2022-01-05 20:24:03,366] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-05 20:24:03,366] {taskinstance.py:1239} INFO - Starting attempt 1 of 6
+[2022-01-05 20:24:03,366] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-05 20:24:03,376] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): my_task_3> on 2022-01-05 14:53:42+00:00
+[2022-01-05 20:24:03,379] {standard_task_runner.py:52} INFO - Started process 33252 to run task
+[2022-01-05 20:24:03,385] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'my_test', 'my_task_3', 'manual__2022-01-05T14:53:42+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/core_concepts.py', '--cfg-path', '/var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T/tmp2u4e6q28', '--error-file', '/var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T/tmplzqcn3bt']
+[2022-01-05 20:24:03,387] {standard_task_runner.py:77} INFO - Job 22: Subtask my_task_3
+[2022-01-05 20:24:03,435] {logging_mixin.py:109} INFO - Running <TaskInstance: my_test.my_task_3 manual__2022-01-05T14:53:42+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2022-01-05 20:24:03,480] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Admin
+AIRFLOW_CTX_DAG_ID=my_test
+AIRFLOW_CTX_TASK_ID=my_task_3
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-05T14:53:42+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-01-05T14:53:42+00:00
+[2022-01-05 20:24:03,480] {logging_mixin.py:109} INFO - 
+Hello alg3
+[2022-01-05 20:24:03,481] {logging_mixin.py:109} INFO - 
+HFinshed alg3
+[2022-01-05 20:24:03,481] {python.py:175} INFO - Done. Returned value was: None
+[2022-01-05 20:24:03,488] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=my_test, task_id=my_task_3, execution_date=20220105T145342, start_date=20220105T145403, end_date=20220105T145403
+[2022-01-05 20:24:03,526] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-01-05 20:24:03,550] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

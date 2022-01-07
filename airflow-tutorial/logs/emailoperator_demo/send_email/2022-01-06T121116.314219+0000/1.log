@@ -1,0 +1,96 @@
+[2022-01-06 17:41:22,442] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: emailoperator_demo.send_email manual__2022-01-06T12:11:16.314219+00:00 [queued]>
+[2022-01-06 17:41:22,449] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: emailoperator_demo.send_email manual__2022-01-06T12:11:16.314219+00:00 [queued]>
+[2022-01-06 17:41:22,449] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-06 17:41:22,449] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-01-06 17:41:22,449] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-06 17:41:22,459] {taskinstance.py:1259} INFO - Executing <Task(EmailOperator): send_email> on 2022-01-06 12:11:16.314219+00:00
+[2022-01-06 17:41:22,461] {standard_task_runner.py:52} INFO - Started process 68505 to run task
+[2022-01-06 17:41:22,467] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'emailoperator_demo', 'send_email', 'manual__2022-01-06T12:11:16.314219+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/email_operator_demo.py', '--cfg-path', '/var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T/tmpyssnnn3f', '--error-file', '/var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T/tmp517fn5lh']
+[2022-01-06 17:41:22,469] {standard_task_runner.py:77} INFO - Job 95: Subtask send_email
+[2022-01-06 17:41:22,514] {logging_mixin.py:109} INFO - Running <TaskInstance: emailoperator_demo.send_email manual__2022-01-06T12:11:16.314219+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2022-01-06 17:41:22,548] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=emailoperator_demo
+AIRFLOW_CTX_TASK_ID=send_email
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-06T12:11:16.314219+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-01-06T12:11:16.314219+00:00
+[2022-01-06 17:41:22,558] {logging_mixin.py:109} WARNING - /Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/email.py:102 PendingDeprecationWarning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2022-01-06 17:41:22,559] {configuration.py:381} WARNING - section/key [smtp/smtp_user] not found in config
+[2022-01-06 17:41:22,559] {email.py:208} INFO - Email alerting: attempt 1
+[2022-01-06 17:41:22,560] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/operators/email.py", line 88, in execute
+    conn_id=self.conn_id,
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/email.py", line 66, in send_email
+    **kwargs,
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/email.py", line 102, in send_email_smtp
+    send_mime_email(e_from=smtp_mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/email.py", line 210, in send_mime_email
+    conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/email.py", line 244, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/socket.py", line 728, in create_connection
+    raise err
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+[2022-01-06 17:41:22,573] {taskinstance.py:1277} INFO - Marking task as FAILED. dag_id=emailoperator_demo, task_id=send_email, execution_date=20220106T121116, start_date=20220106T121122, end_date=20220106T121122
+[2022-01-06 17:41:22,583] {standard_task_runner.py:92} ERROR - Failed to execute job 95 for task send_email
+Traceback (most recent call last):
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/operators/email.py", line 88, in execute
+    conn_id=self.conn_id,
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/email.py", line 66, in send_email
+    **kwargs,
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/email.py", line 102, in send_email_smtp
+    send_mime_email(e_from=smtp_mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/email.py", line 210, in send_mime_email
+    conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/site-packages/airflow/utils/email.py", line 244, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/socket.py", line 728, in create_connection
+    raise err
+  File "/Users/admin/opt/miniconda3/envs/airflow-tutorial/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+[2022-01-06 17:41:22,606] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-01-06 17:41:22,626] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

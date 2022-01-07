@@ -1,0 +1,24 @@
+[2022-01-06 16:43:37,284] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: print_random_number.hello scheduled__2021-12-31T00:00:00+00:00 [queued]>
+[2022-01-06 16:43:37,292] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: print_random_number.hello scheduled__2021-12-31T00:00:00+00:00 [queued]>
+[2022-01-06 16:43:37,292] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-06 16:43:37,292] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-01-06 16:43:37,292] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-06 16:43:37,302] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): hello> on 2021-12-31 00:00:00+00:00
+[2022-01-06 16:43:37,304] {standard_task_runner.py:52} INFO - Started process 64285 to run task
+[2022-01-06 16:43:37,310] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'print_random_number', 'hello', 'scheduled__2021-12-31T00:00:00+00:00', '--job-id', '83', '--raw', '--subdir', 'DAGS_FOLDER/print_random.py', '--cfg-path', '/var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T/tmpnpgztrrk', '--error-file', '/var/folders/3z/fyvld5jd6lxbb7nt49h4jx1h0000gn/T/tmp5dvx8tig']
+[2022-01-06 16:43:37,311] {standard_task_runner.py:77} INFO - Job 83: Subtask hello
+[2022-01-06 16:43:37,353] {logging_mixin.py:109} INFO - Running <TaskInstance: print_random_number.hello scheduled__2021-12-31T00:00:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2022-01-06 16:43:37,387] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=print_random_number
+AIRFLOW_CTX_TASK_ID=hello
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-31T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-31T00:00:00+00:00
+[2022-01-06 16:43:37,388] {logging_mixin.py:109} INFO - Hello
+[2022-01-06 16:43:37,388] {python.py:175} INFO - Done. Returned value was: None
+[2022-01-06 16:43:37,395] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=print_random_number, task_id=hello, execution_date=20211231T000000, start_date=20220106T111337, end_date=20220106T111337
+[2022-01-06 16:43:37,409] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-01-06 16:43:37,427] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
