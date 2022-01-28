@@ -1,6 +1,6 @@
 # Apache-Airflow-Complete-Hands-On-Beginner-to-Advanced-Class
 
-Install Airflow on MacOS (Guide)
+## Install Airflow on MacOS (Guide)
 Follow these steps to install Airflow on your Mac.
 
 
@@ -79,5 +79,33 @@ This should print 1.10.10.
 
 If you have installed Airflow before you might get a DeprecationWarning about having multiple airflow.cfg files but that’s okay as long as you set the correct AIRFLOW_HOME environment variable in your Terminal.
 
+
+## Run Airflow locally
+
+1. activate virtual environment
+   
+   conda activate airflow-tutorial
+
+
+2. Check Airflow Home Path
+
+export AIRFLOW_HOME="/Users/nivedita/Desktop/airflow-tutorial"
+
+echo $AIRFLOW_HOME
+
+
+3. Initialize the airflow  database which will create the table necessary for airflow dags and status
+
+airflow db init 
+
+
+4. Run Webserver
+
+airflow webserver
+
+
+5. Run Scheduler parallel in another new tab of command line
+
+airflow scheduler
 
 
